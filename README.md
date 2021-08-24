@@ -14,6 +14,7 @@ Various Linux systems
 
 ## EXAMPLE
 `./CredsFinder.sh /` --- Starts search from the system root directory.
+
 `./CredsFinder.sh /www/var/html` --- Starts search from the /www/var/html directory.
 
 ![CredsFinderPoC](https://user-images.githubusercontent.com/83319068/130558822-f8505f52-2275-49a7-a136-4553f2f175f1.png)
