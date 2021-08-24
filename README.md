@@ -1,9 +1,9 @@
 # CredsFinder
-A Simple script for finding clear text credentials in various files.
 
 ## DESCRIPTION
 This is a simeple Bash script for finding clear text credentials in various files.
 It simply iterates over the specified file path, checks the contents of the files, and outputs the content that includes anything that has to do with credentials such as usernames and passwords.
+This is to be used for educational and security testing purposes only and I'm not responsible for the misuse of this program.
 
 ## TESTED ON:
 Various Linux systems
