@@ -8,7 +8,7 @@
 # Some people like to store their usernames and passwords in office files such as word or excel documents :)
 
 # AUTHOR
-# lkim94
+# https://github.com/lkim94
 
 # USAGE
 # 1. PS >>> Set-ExecutionPolicy -Scope CurrentUser Unrestricted
@@ -33,6 +33,7 @@ param (
 
 $officeFileTypes = @('.doc', '.docx', '.xls', '.xlsx', '.xlam', '.xlsm', '.xlsb', '.pptx', '.pptm', '.ppt')
 $defaultFileTypes = @('.txt', '.csv', '.log', '.cnf', '.conf', '.config', '.xml', '.asp', '.aspx', '.jsp', '.php')
+$exclusions = @('*Cache*')
 $fileTypes += $defaultFileTypes
 
 $credsPattern = "([/<`"';]{1}(username|uname|user|usr|password|passwd|pass|pwd|pw)[>`"':=]{1})"
@@ -44,7 +45,7 @@ $officeFiles = @()
 Write-Host `r`n"[+] Searching from: $startDir"
 Write-Host "[+] Checking the following file types: $fileTypes `r`n"
 
-$files = Get-ChildItem -Path $startDir -Recurse -Force -File -ErrorAction SilentlyContinue
+$files = Get-ChildItem -Path $startDir -Exclude $exclusions -Recurse -Force -File -ErrorAction SilentlyContinue
 ForEach ($file in $files)
 {
     if ($file.Extension -in $fileTypes) 
