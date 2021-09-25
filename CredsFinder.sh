@@ -28,7 +28,7 @@ start_dir=$1
 bold=`echo -en "\e[1m"`
 normal=`echo -en "\e[0m"`
 
-extensions='\s|\d|txt|log|cnf|conf|config|db|xml|php'
+extensions='\s|\d|txt|log|bak|cnf|conf|config|db|xml|php'
 pattern='"username"|'username'|uname:|uname=|user:|user=|user>|usr:|usr=|"password"|'password'|passwd:|passwd=|pass:|pass=|pass>|pwd:|pwd=|pw:|pw=|mysqli_connect'
 
 echo -e "\n[+] Searching from: $start_dir"
