@@ -29,7 +29,7 @@ bold=`echo -en "\e[1m"`
 normal=`echo -en "\e[0m"`
 
 extensions='\s|\d|txt|log|bak|cnf|conf|config|db|xml|php'
-pattern='"username"|'username'|uname:|uname=|user:|user=|user>|usr:|usr=|"password"|'password'|passwd:|passwd=|pass:|pass=|pass>|pwd:|pwd=|pw:|pw=|mysqli_connect'
+pattern='"username"|'username'|uname:|uname=|user:|user=|user>|usr:|usr=|"password"|'password'|passwd:|passwd=|pass:|pass=|pass>|pwd:|pwd=|pw:|pw=|root:|mysqli_connect'
 
 echo -e "\n[+] Searching from: $start_dir"
 echo -e "[+] Checking the following file types: ${extensions[@]}\n"
